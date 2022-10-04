@@ -5,8 +5,8 @@ function updateSubtotal(product) {
   const getPrice = product.querySelector('.price span');
   const getQuantity = product.querySelector('.quantity input').value;
   const getSubtotal = product.querySelector('.subtotal');
-  const price = parseInt(getPrice.innerText);
-  const subtotal = price * parseInt(getQuantity);
+  const price = getPrice.innerText;
+  const subtotal = price * getQuantity;
   getSubtotal.innerText = '$' + subtotal;
   return subtotal;
 }
